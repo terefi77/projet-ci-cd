@@ -1,0 +1,22 @@
+{
+    "name": "saleh/projet_ci_cd",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "App\\Tests\\": "tests/"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^12.5"
+    },
+    "authors": [
+        {
+            "name": "saleh terefi",
+            "email": "salehterefi77@gmail.com"
+        }
+    ]
+}
