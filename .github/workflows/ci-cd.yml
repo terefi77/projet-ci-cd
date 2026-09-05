@@ -21,4 +21,10 @@ jobs:
         run: vendor/bin/phpunit tests
 
       - name: Builder l'image Docker
-        run: docker build -t projet-ci-cd .
+        run: docker build -t salehterefi/projet-ci-cd .
+
+      - name: Connexion à Docker Hub
+        run: docker login -u ${{ secrets.DOCKERHUB_USERNAME }} -p ${{ secrets.DOCKERHUB_TOKEN }}
+
+      - name: Pousser l'image sur Docker Hub
+        run: docker push salehterefi/projet-ci-cd
